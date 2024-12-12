@@ -18,6 +18,8 @@ RUN mkdir -p /var/lib/grafana /var/log/grafana /etc/grafana
 
 RUN chown -R grafana:grafana /var/lib/grafana /var/log/grafana /etc/grafana
 
+COPY datasources.yaml /etc/grafana/provisioning/datasources/datasources.yaml
+
 ENV GF_PATHS_CONFIG=/etc/grafana/grafana.ini
 ENV GF_PATHS_DATA=/var/lib/grafana
 ENV GF_PATHS_LOGS=/var/log/grafana
