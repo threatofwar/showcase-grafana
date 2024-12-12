@@ -32,4 +32,6 @@ jobs:
       - name: Push Grafana Docker image to DockerHub
         if: github.ref == 'refs/heads/main'
         run: |
+          docker tag threatofwar/grafana:11.4.0 threatofwar/grafana:latest
           docker push threatofwar/grafana:11.4.0
+          docker push threatofwar/grafana:latest
