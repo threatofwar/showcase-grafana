@@ -24,6 +24,10 @@ ENV GF_PATHS_LOGS=/var/log/grafana
 ENV GF_PATHS_PLUGINS=/var/lib/grafana/plugins
 ENV GF_PATHS_HOME=/usr/share/grafana
 
+ENV GF_DATASOURCE_PROMETHEUS_URL="https://showcase-prometheus.onrender.com"
+ENV GF_DATASOURCE_PROMETHEUS_NAME="Prometheus"
+ENV GF_DATASOURCE_PROMETHEUS_ACCESS="proxy"
+
 USER grafana
 
 WORKDIR /usr/share/grafana
