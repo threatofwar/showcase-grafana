@@ -14,7 +14,7 @@ RUN apt-get update && \
     apt-get update && \
     apt-get install -y grafana=11.4.0
 
-RUN useradd -ms /bin/bash -r grafana
+RUN mkdir -p /var/lib/grafana /var/log/grafana /etc/grafana
 
 RUN chown -R grafana:grafana /var/lib/grafana /var/log/grafana /etc/grafana
 
